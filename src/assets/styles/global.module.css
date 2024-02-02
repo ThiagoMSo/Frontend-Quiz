@@ -1,0 +1,21 @@
+@font-face {
+  font-family: "Rubik";
+  src: url("../fonts/Rubik-Italic-VariableFont_wght.ttf") format("opentype");
+  src: url("../fonts/Rubik-VariableFont_wght.ttf") format("opentype");
+  src: url("../fonts/static/Rubik-Medium.ttf") format("opentype");
+  src: url("../fonts/static/Rubik-Regular.ttf") format("opentype");
+  src: url("../fonts/static/Rubik-Italic.ttf") format("opentype");
+}
+
+:root {
+  --main-color-purple: #A729F5;
+  --main-color-dark-gray: #313E51;
+  --main-color-blue: #3B4D66;
+  --main-color-gray: #626C7F;
+  --main-color-light-gray-100: #ABC1E1;
+  --main-color-light-gray-50: #F4F6FA;
+  --main-color-white: #FFFFFF;
+  --main-color-green: #26D782;
+  --main-color-orange: #EE5454;
+  font-family: 'Rubik', sans-serif;
+}
