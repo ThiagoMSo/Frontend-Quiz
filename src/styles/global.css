@@ -9,13 +9,18 @@
 
 :root {
   --main-color-purple: #A729F5;
-  --main-color-dark-gray: #313E51;
+  --main-color-dark-navy: #313E51;
   --main-color-blue: #3B4D66;
-  --main-color-gray: #626C7F;
+  --main-color-gray-navy: #626C7F;
   --main-color-light-gray-100: #ABC1E1;
   --main-color-light-gray-50: #F4F6FA;
   --main-color-white: #FFFFFF;
   --main-color-green: #26D782;
   --main-color-orange: #EE5454;
   font-family: 'Rubik', sans-serif;
+}
+
+.white-content {
+  background: var(--main-color-dark-navy);
+  color: var(--main-color-white)
 }

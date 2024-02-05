@@ -1,38 +1,31 @@
-import SwitchTheme from './components/SwitchTheme/SwithTheme'
+/* eslint-disable prettier/prettier */
+import { Switch } from '@mui/material'
+import './assets/styles/global.css'
+import { themes, createContextTheme } from './components/state/ThemeContext'
+import { useState } from 'react'
+
+
+
 function App() {
+  const [darkmode, setDarkmode] = useState(true)
+
+  const handleChangeTheme = (changeTheme: (theme: string) => void) => {
+    setDarkmode(!darkmode)
+    changeTheme(darkmode ? themes.light : themes.dark)
+  }
+
   return (
     <>
-      <h1>Welcome to the Frontend Quiz!</h1>
-      <h3>Pick a subject to get started.</h3>
-
-      <div>
-        <SwitchTheme />
-        <p>acessibilidade</p>
-      </div>
-
-      <span>
-        <p>HTML</p>
-        <p>CSS</p>
-        <p>JavaScript</p>
-        <p>Accessibility</p>
-      </span>
-
-      <span>
-        {' '}
-        Question ${1} of ${10}{' '}
-      </span>
-
-      <p>A</p>
-      <p>B</p>
-      <p>C</p>
-      <p>D</p>
-
-      <span>Submit answer</span>
-
-      <h2>Quiz completed</h2>
-      <h3>You scored...</h3>
-
-      <span>${10}out of 10</span>
+      <h1>Mudar de cor</h1>
+      <createContextTheme.Consumer>
+        {({ changeTheme }) => (
+          <Switch
+            onClick={() => {
+              handleChangeTheme(changeTheme)
+            }}
+          />
+        )}
+      </createContextTheme.Consumer>
     </>
   )
 }
